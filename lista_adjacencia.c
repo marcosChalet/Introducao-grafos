@@ -67,7 +67,6 @@ void adiciona_elementos (FILE **fp, int ***lista,
         conv_j = &linha_arq[1];
 
         (*lista)[atoi(conv_i)][append[atoi(conv_i)]++] = atoi(conv_j)+1;
-        (*lista)[atoi(conv_j)][append[atoi(conv_j)]++] = atoi(conv_i)+1;
     }
 }
 
