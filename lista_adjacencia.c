@@ -66,7 +66,7 @@ void adiciona_elementos (FILE **fp, int ***lista,
         conv_i = &linha_arq[0];
         conv_j = &linha_arq[1];
 
-        (*lista)[atoi(conv_i)][append[atoi(conv_i)]++] = atoi(conv_j)+1;
+        (*lista)[atoi(conv_i)-1][append[atoi(conv_i)-1]++] = atoi(conv_j);
     }
 }
 
@@ -97,13 +97,13 @@ void mostrar_lista (int **lista, int dim){
         if (lista[i][0] == 0)
             continue;
 
-        printf("Vértice %d: [", i+1);
+        printf("Vértice %c: [", 'a' + i);
         for (int j = 0; j < dim; j++) {
             if (lista[i][j+1] == 0){
-                printf("%d", lista[i][j]);
+                printf("%c", 'a' + lista[i][j] - 1);
                 break;
             }
-            printf("%d, ", lista[i][j]);
+            printf("%c, ", 'a' + lista[i][j] - 1);
         }
         printf("]\n");
     }
