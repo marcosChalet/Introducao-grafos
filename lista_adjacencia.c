@@ -93,6 +93,8 @@ int** carregar_lista (int *qtd_nos){
 
 void mostrar_lista (int **lista, int dim){
 
+    printf("\n LISTA DE ADJACÊNCIAS\n\n");
+
     for (int i = 0; i < dim; i++) {
         if (lista[i][0] == 0)
             continue;
